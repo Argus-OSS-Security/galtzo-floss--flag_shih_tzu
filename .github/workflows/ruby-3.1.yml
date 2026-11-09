@@ -8,20 +8,21 @@ env:
   TURBO_TESTS2_WATCHDOG_SECONDS: 900
   K_SOUP_COV_DO: false
 
-on:
-  push:
-    branches:
-      - 'main'
-      - '*-stable'
-    tags:
-      - '!*' # Do not execute on tags
-  pull_request:
-    branches:
-      - '*'
-  # Allow manually triggering the workflow.
-  workflow_dispatch:
-
-# Cancels all previous workflow runs for the same branch that have not yet completed.
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - 'main'
+#       - '*-stable'
+#     tags:
+#       - '!*' # Do not execute on tags
+#   pull_request:
+#     branches:
+#       - '*'
+#   # Allow manually triggering the workflow.
+#   workflow_dispatch:
+# 
+# # Cancels all previous workflow runs for the same branch that have not yet completed.
 concurrency:
   # The concurrency group contains the workflow name and the branch name.
   group: "${{ github.workflow }}-${{ github.ref }}"

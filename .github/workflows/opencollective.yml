@@ -1,11 +1,12 @@
 name: Open Collective Backers
 
-on:
-  schedule:
-    # Run once a week on Sunday at 12:00 AM UTC
-    - cron: '0 0 * * 0'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     # Run once a week on Sunday at 12:00 AM UTC
+#     - cron: '0 0 * * 0'
+#   workflow_dispatch:
+# 
 permissions:
   contents: write
 
